@@ -10,6 +10,8 @@ openssl x509 -inform der -in certificate.cer -outform pem -out certificate.pem
 Calculate SPKI-SHA256-BASE64 value using openssl
 cat ca.pem | openssl x509 -inform pem -noout -outform pem -pubkey | openssl pkey -pubin -inform pem -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 
+Getting the .pem value by running this command
+openssl s_client -showcerts -connect apple.com:443
 
 References:
 https://developer.apple.com/news/?id=g9ejcf8y

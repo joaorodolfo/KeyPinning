@@ -7,6 +7,7 @@
 
 import UIKit
 class ViewController: UIViewController {
+    
     @IBOutlet var bankbutton: UIButton!
     @IBOutlet var appleButton: UIButton!
     
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func appleAction(_ sender: Any) {
+        //https://developer.apple.com/forums/thread/672291
+        //Related to apple.com reported by others for NSPINNEDCAIdentiies
         guard let url = URL(string: "https://apple.com") else { return }
         ServiceManager().callAPI(withURL: url) { message in
             let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)

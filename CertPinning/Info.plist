@@ -10,6 +10,13 @@
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
+				<key>NSPinnedCAIdentities</key>
+				<array>
+					<dict>
+						<key>SPKI-SHA256-BASE64</key>
+						<string>bb+uANN7nNc/j7R95lkXrwDg3d9C286sIMF8AnXuIJU=</string>
+					</dict>
+				</array>
 				<key>NSPinnedLeafIdentities</key>
 				<array>
 					<dict>
@@ -30,7 +37,7 @@
 				<array>
 					<dict>
 						<key>SPKI-SHA256-BASE64</key>
-						<string>WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=</string>
+						<string>uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc=</string>
 					</dict>
 				</array>
 			</dict>
