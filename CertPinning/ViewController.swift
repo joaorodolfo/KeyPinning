@@ -7,10 +7,31 @@
 
 import UIKit
 class ViewController: UIViewController {
+    @IBOutlet var bankbutton: UIButton!
+    @IBOutlet var appleButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        callTestPlistPinning()
     }
+    
+    @IBAction func bankAction(_ sender: Any) {
+        guard let url = URL(string: "https://www.dbs.com") else { return }
+        ServiceManager().callAPI(withURL: url) { message in
+            let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func appleAction(_ sender: Any) {
+        guard let url = URL(string: "https://apple.com") else { return }
+        ServiceManager().callAPI(withURL: url) { message in
+            let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
     func callTestManualPinning() {
         guard let url = URL(string: "https://www.google.co.uk") else { return }
@@ -21,13 +42,5 @@ class ViewController: UIViewController {
         }
     }
     
-    func callTestPlistPinning() {
-        guard let url = URL(string: "https://example.org") else { return }
-        ServiceManager().callAPI(withURL: url) { message in
-            let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
 }
 
