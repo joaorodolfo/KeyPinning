@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func bankAction(_ sender: Any) {
-        guard let url = URL(string: "https://www.dbs.com") else { return }
+        guard let url = URL(string: "https://www.dbs.com.sg") else { return }
         ServiceManager().callAPI(withURL: url) { message in
             let alert = UIAlertController(title: "SSLPinning", message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
