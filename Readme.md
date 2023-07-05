@@ -16,3 +16,4 @@ openssl s_client -showcerts -connect apple.com:443
 References:
 https://developer.apple.com/news/?id=g9ejcf8y
 https://serverfault.com/questions/254627/how-do-i-convert-a-cer-certificate-to-pem
+https://cheatsheetseries.owasp.org/cheatsheets/Pinning_Cheat_Sheet.html
